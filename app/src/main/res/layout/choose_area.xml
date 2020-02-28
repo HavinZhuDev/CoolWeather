@@ -25,9 +25,7 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
-            android:text="Back"
-            android:textColor="#fff" />
-        <!--android:background="@drawable/ic_back" -->
+            android:background="@drawable/ic_back"/>
 
     </RelativeLayout>
 
