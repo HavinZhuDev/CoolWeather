@@ -5,6 +5,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
@@ -23,6 +24,7 @@ import com.bumptech.glide.Glide;
 import com.study.coolweather.gson.Forecast;
 import com.study.coolweather.gson.HeWeather6;
 import com.study.coolweather.gson.Lifestyle;
+import com.study.coolweather.service.AutoUpdateService;
 import com.study.coolweather.util.HttpUtil;
 import com.study.coolweather.util.Utility;
 
@@ -315,6 +317,9 @@ public class WeatherActivity extends AppCompatActivity {
             String weatherInfo = weather.now.cond_txt;
             degreeText.setText(degree);
             weatherInfoText.setText(weatherInfo);
+//            //启动自动更新服务
+//            Intent intent = new Intent(this, AutoUpdateService.class);
+//            startService(intent);
         }
         //天气预报
         if (weather.forecastList != null) {
